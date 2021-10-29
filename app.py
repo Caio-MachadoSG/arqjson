@@ -39,6 +39,7 @@ def estoque():
 def listagem():
     arq_estoque = open('estoque.json', mode='r')
     estoque = json.load(arq_estoque)
+    arq_estoque.close()
     return render_template('listagem.html', estoque=estoque)
 if __name__ == '__main__':
     app.run()
